@@ -10,4 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.requires_arc = true
   s.vendored_frameworks = 'KakaoOpenSDK.framework'
+  s.source_files = '*.{h,m}'
+  s.frameworks = 'UIKit'
+
 end
