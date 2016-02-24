@@ -38,6 +38,17 @@
                                    arguments:(NSDictionary *)arguments
                            completionHandler:(void (^)(NSError *error))completionHandler;
 
+@optional
+/*!
+ @abstract 미리 지정된 Message Template 를 사용하여, 카카오톡의 나와의 채팅방으로 메시지를 전송합니다. 모든 앱에서 호출 가능합니다.
+ @param templateID 미리 지정된 템플릿 메시지 ID
+ @param arguments 템플릿 메시지를 만들 때, 채워줘야할 파라미터들
+ @param completionHandler 요청 완료시 실행될 block. 오류 처리와 전송 완료시 수행된다.
+ */
+- (KOSessionTask *)sendMessageToMeWithTemplteID:(NSString *)templateID
+                                      arguments:(NSDictionary *)arguments
+                              completionHandler:(void (^)(NSError *error))completionHandler;
+
 @end
 
 #endif

@@ -113,5 +113,16 @@ typedef NS_ENUM(NSInteger, KOTalkMessageReceiverType) {
 + (instancetype)talkChatListTaskWithContext:(KOChatContext *)context
                           completionHandler:(void (^)(NSArray *chats, NSError *error))completionHandler;
 
+/*!
+ @abstract "나만의 채팅방" 으로 메세지를 전송합니다.
+ @param templateID 미리 지정된 템플릿 메시지 ID. (개발자 사이트를 통해서 생성할 수 있도록 할 예정)
+ @param messageArguments 템플릿 메시지를 만들 때, 채워줘야할 파라미터들.
+ @param completionHandler 요청 완료시 실행될 block. 오류 처리와 전송 완료 시 수행된다.
+ @discussion
+ */
++ (instancetype)talkSendMemoTaskWithTemplateID:(NSString *)templateID
+                              messageArguments:(NSDictionary *)messageArguments
+                             completionHandler:(void (^)(NSError *error))completionHandler;
+
 
 @end
