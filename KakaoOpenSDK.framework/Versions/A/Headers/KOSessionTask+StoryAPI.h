@@ -31,11 +31,6 @@
  */
 
 /*!
- 인증된 session 정보를 바탕으로 각종 카카오스토리 API를 호출할 수 있습니다.
- */
-@interface KOSessionTask (StoryAPI)
-
-/*!
  @abstract KOStoryPostPermission 스토리 포스팅 공개 범위
  @constant KOStoryPostPermissionPublic 전체공개
  @constant KOStoryPostPermissionFriend 친구공개
@@ -46,6 +41,11 @@ typedef NS_ENUM(NSInteger, KOStoryPostPermission) {
     KOStoryPostPermissionFriend,
     KOStoryPostPermissionOnlyMe
 };
+
+/*!
+ 인증된 session 정보를 바탕으로 각종 카카오스토리 API를 호출할 수 있습니다.
+ */
+@interface KOSessionTask (StoryAPI)
 
 #pragma mark - KakaoStory
 

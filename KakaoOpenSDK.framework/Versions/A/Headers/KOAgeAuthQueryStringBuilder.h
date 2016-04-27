@@ -58,12 +58,6 @@
  */
 @property (nonatomic) NSString *authFrom;
 
-/*!
- @property forceUpdate
- @abstract 강제 재인증 허용 여부. (optional, default false)
- */
-@property (nonatomic) BOOL forceUpdate;
-
 - (NSString *) build;
 
 @end

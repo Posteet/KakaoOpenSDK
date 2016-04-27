@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "KakaoOpenSDK"
-  s.version          = "1.0.52"
+  s.version          = "1.0.56"
   s.summary          = "KakaoOpenSDK for CocoaPods."
   s.homepage         = "https://github.com/Posteet/KakaoOpenSDK"
   s.license          = 'Kakao'

@@ -24,13 +24,6 @@
 #import <Foundation/Foundation.h>
 
 /*!
- @class KOStoryMyStoryInfo
- @discussion 카카오스토리의 내스토리 정보를 담고 있는 구조체.
- */
-
-@interface KOStoryMyStoryInfo : NSObject
-
-/*!
  @abstract KOStoryMediaType 스토리의 미디어 형식
  @constant KOStoryMediaTypeUnknown 알수 없는 미디어 형식
  @constant KOStoryMediaTypeNotSupported 지원되지 않는 미디어 형식
@@ -57,6 +50,13 @@ typedef NS_ENUM(NSInteger, KOStoryPermission) {
     KOStoryPermissionFriend,
     KOStoryPermissionOnlyMe
 };
+
+/*!
+ @class KOStoryMyStoryInfo
+ @discussion 카카오스토리의 내스토리 정보를 담고 있는 구조체.
+ */
+
+@interface KOStoryMyStoryInfo : NSObject
 
 /*!
  @property ID

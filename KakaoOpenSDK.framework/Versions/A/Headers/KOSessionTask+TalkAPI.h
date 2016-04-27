@@ -30,13 +30,6 @@
  */
 
 /*!
- 인증된 session 정보를 바탕으로 각종 카카오톡 API를 호출할 수 있습니다.
- */
-@interface KOSessionTask (TalkAPI)
-
-#pragma mark - KakaoTalk
-
-/*!
  @abstract KOTalkMessageReceiverType
  @constant KOTalkMessageReceiverTypeUser
  @constant KOTalkMessageReceiverTypeFriend
@@ -47,6 +40,13 @@ typedef NS_ENUM(NSInteger, KOTalkMessageReceiverType) {
     KOTalkMessageReceiverTypeFriend,
     KOTalkMessageReceiverTypeChat
 };
+
+/*!
+ 인증된 session 정보를 바탕으로 각종 카카오톡 API를 호출할 수 있습니다.
+ */
+@interface KOSessionTask (TalkAPI)
+
+#pragma mark - KakaoTalk
 
 /*!
  @abstract 현재 로그인된 사용자의 카카오톡 프로필 정보를 얻을 수 있습니다.
