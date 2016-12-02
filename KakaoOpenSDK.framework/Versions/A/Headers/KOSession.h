@@ -1,20 +1,18 @@
 /**
-* Copyright 2015 Kakao Corp.
-*
-* Redistribution and modification in source or binary forms are not permitted without specific prior written permission.
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*    http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright 2015-2016 Kakao Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 /*!
  @header KOSession.h
@@ -77,12 +75,14 @@ typedef NS_ENUM(NSInteger, KOAgeAuthLevel) {
  @abstract KOAgeAuthLimit 연령인증 시 인증 나이.
  @constant KOAgeAuthLimitType12 12세 인증.
  @constant KOAgeAuthLimitType15 15세 인증.
+ @constant KOAgeAuthLimitType18 18세 인증.
  @constant KOAgeAuthLimitType19 19세 인증.
  */
 typedef NS_ENUM(NSInteger, KOAgeAuthLimit) {
     KOAgeAuthLimitTypeNone = 0,
     KOAgeAuthLimitType12 = 12,
     KOAgeAuthLimitType15 = 15,
+    KOAgeAuthLimitType18 = 18,
     KOAgeAuthLimitType19 = 19
 };
 
@@ -220,7 +220,7 @@ typedef NS_ENUM(NSInteger, KOAgeAuthProperty) {
  @param authParams 로그인 요청시의 인증에 필요한 부가적인 파라미터들을 전달한다.
  @param authTypes 로그인 요청시의 인증 타입(KOAuthType)의 array.
  */
-- (void)openWithCompletionHandler:(KOSessionCompletionHandler)completionHandler authParams:(NSDictionary *)authParams authTypes:(NSArray *)authTypes;
+- (void)openWithCompletionHandler:(KOSessionCompletionHandler)completionHandler authParams:(NSDictionary *)authParams authTypes:(NSArray<NSNumber *> *)authTypes;
 
 /*!
  현재 기기에서만 로그아웃한다.

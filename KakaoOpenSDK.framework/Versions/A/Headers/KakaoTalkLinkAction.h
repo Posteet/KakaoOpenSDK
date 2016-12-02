@@ -1,20 +1,18 @@
 /**
-* Copyright 2015 Kakao Corp.
-*
-* Redistribution and modification in source or binary forms are not permitted without specific prior written permission.
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*    http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright 2015-2016 Kakao Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 /*!
  @header KakaoTalkLinkAction.h
@@ -74,7 +72,17 @@ typedef NS_ENUM(NSInteger, KakaoTalkLinkActionDeviceType) {
  */
 + (KakaoTalkLinkAction *)createAppAction:(KakaoTalkLinkActionOSPlatform)os
                               devicetype:(KakaoTalkLinkActionDeviceType)devicetype
-                               execparam:(NSDictionary *)execparam;
+                               execparam:(NSDictionary<NSString *, id> *)execparam;
+
+/*!
+ @abstract 앱용 Action을 생성한다.
+ @param os 단말의 OS Platform. KakaoTalkLinkActionOSPlatform enum 참조
+ @param devicetype 단말의 종류. KakaoTalkLinkActionDeviceType enum 참조
+ @param execparamString 애플리케이션 구동 url 의 parameter 문자열
+ */
++ (KakaoTalkLinkAction *)createAppAction:(KakaoTalkLinkActionOSPlatform)os
+                              devicetype:(KakaoTalkLinkActionDeviceType)devicetype
+                         execparamString:(NSString *)execparamString;
 
 /*!
  @abstract 앱용 Action을 생성한다.
@@ -85,7 +93,19 @@ typedef NS_ENUM(NSInteger, KakaoTalkLinkActionDeviceType) {
  */
 + (KakaoTalkLinkAction *)createAppAction:(KakaoTalkLinkActionOSPlatform)os
                               devicetype:(KakaoTalkLinkActionDeviceType)devicetype
-                             marketparam:(NSDictionary *)marketparam
-                               execparam:(NSDictionary *)execparam;
+                             marketparam:(NSDictionary<NSString *, id> *)marketparam
+                               execparam:(NSDictionary<NSString *, id> *)execparam;
+
+/*!
+ @abstract 앱용 Action을 생성한다.
+ @param os 단말의 OS Platform. KakaoTalkLinkActionOSPlatform enum 참조
+ @param devicetype 단말의 종류. KakaoTalkLinkActionDeviceType enum 참조
+ @param marketparamString 애플리케이션이 없을 시 설치 url 의 parameter 문자열
+ @param execparamString 애플리케이션 구동 url 의 parameter 문자열
+ */
++ (KakaoTalkLinkAction *)createAppAction:(KakaoTalkLinkActionOSPlatform)os
+                              devicetype:(KakaoTalkLinkActionDeviceType)devicetype
+                       marketparamString:(NSString *)marketparamString
+                         execparamString:(NSString *)execparamString;
 
 @end

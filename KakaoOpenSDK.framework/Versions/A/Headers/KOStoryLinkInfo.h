@@ -1,20 +1,18 @@
 /**
-* Copyright 2015 Kakao Corp.
-*
-* Redistribution and modification in source or binary forms are not permitted without specific prior written permission.
-*
-* Licensed under the Apache License, Version 2.0 (the "License");
-* you may not use this file except in compliance with the License.
-* You may obtain a copy of the License at
-*
-*    http://www.apache.org/licenses/LICENSE-2.0
-*
-* Unless required by applicable law or agreed to in writing, software
-* distributed under the License is distributed on an "AS IS" BASIS,
-* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-* See the License for the specific language governing permissions and
-* limitations under the License.
-*/
+ * Copyright 2015-2016 Kakao Corp.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 /*!
  @header KOStoryLinkInfo.h
@@ -58,7 +56,7 @@
  @property image
  @abstract 해당 웹 페이지의 대표 이미지 주소의 url array. 최대 3개.
  */
-@property(nonatomic, readonly) NSArray *image;
+@property(nonatomic, readonly) NSArray<NSString *> *image;
 
 /*!
  @property desc
@@ -82,7 +80,7 @@
      requestedUrl:(NSString *)requestedUrl
              host:(NSString *)host
             title:(NSString *)title
-            image:(NSArray *)image
+            image:(NSArray<NSString *> *)image
              desc:(NSString *)desc
           section:(NSString *)section
              type:(NSString *)type;
